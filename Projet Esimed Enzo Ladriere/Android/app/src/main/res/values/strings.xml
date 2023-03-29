@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">jojo\'sProject</string>
+    <string name="BtnGoInscription">Créer un compte</string>
+    <string name="pseudonymeCreateAccount">Pseudonyme :</string>
+    <string name="lastnameCreateAccount">Nom :</string>
+    <string name="nameCreateAccount">Prenom :</string>
+    <string name="passwordCreateAccount">Mot de passe : </string>
+    <string name="confirmationPasswordCreateAccount">Confirmer mot de passe :</string>
+</resources>
