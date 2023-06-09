@@ -1,5 +1,7 @@
 const express = require('express');
 const userRepository = require('../models/user.repository');
+const {tableUtilisateur, tableListeJoueur} = require("../models/user.model");
+const {body} = require("express-validator");
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -7,18 +9,30 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:pseudonyme', async (req, res) => {
-    const foundUser = userRepository.getUserByName(req.params.pseudonyme);
-    res.send(await foundUser);
+    const foundUser = await userRepository.getUserByName(req.params.pseudonyme);
+    res.send(foundUser);
+});
+router.get('/syncBDD', async (req ,res) => {
+    await userRepository.syncBDD();
+    res.status(200)
 });
 
 router.post('/', async (req, res) => {
-    await userRepository.createUser(req.body);
-    res.status(201).end();
-});
+    let foundUser =  await tableUtilisateur.findOne({where: {pseudonyme: req.body.pseudonyme }});
+    if (foundUser) {
+        res.status(400)
+        res.send(foundUser.dataValues)
+    } else {
+        await userRepository.createUser(req.body);
+        let newUser = await tableUtilisateur.findOne({where: {pseudonyme: req.body.pseudonyme}});
+        if(newUser) {
+            res.status(200)
+            res.send(newUser.dataValues)
+        } else {
+            res.status(403)
+        }
 
-router.post('/authenticate', async (req, res) => {
-    await userRepository.authenticateUser(req.body);
-    res.status(201).end();
+    }
 });
 
 router.put('/:id', async (req, res) => {

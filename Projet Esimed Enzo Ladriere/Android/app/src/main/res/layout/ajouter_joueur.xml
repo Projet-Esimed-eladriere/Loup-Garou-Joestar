@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:text="Ajouter Joueur"/>
+
+    <EditText
+        android:id="@+id/nomJoueur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titre"
+        android:hint="Nom joueur"/>
+
+    <Button
+        android:id="@+id/joueurAnnuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomJoueur"
+        android:text="Annuler"/>
+
+    <Button
+        android:id="@+id/joueurAjouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomJoueur"
+        android:layout_alignParentEnd="true"
+        android:text="Ajouter"/>
+</RelativeLayout>

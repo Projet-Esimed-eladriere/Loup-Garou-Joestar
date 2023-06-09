@@ -2,6 +2,8 @@ const express = require('express');
 const middleswares = require('./middleswares')
 const userRoutes = require('../controller/user.routes');
 const authRoutes = require('../controller/auth.route');
+const joueurRoutes = require('../controller/joueur.route');
+const compositionRoutes = require('../controller/composition.route')
 class WebServer
 {
     app = undefined;
@@ -22,6 +24,9 @@ class WebServer
     }
     _initializeRoutes() {
         this.app.use('/users', userRoutes.initializeRoutes());
+        this.app.use('/auth', authRoutes.initializeRoutes());
+        this.app.use('/joueur', joueurRoutes.initializeRoutes());
+        this.app.use('/composition', compositionRoutes.initializeRoutes())
     }
     stop() {
         this.server.close();

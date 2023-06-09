@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">jojo\'sProject</string>
+    <string name="app_name">JoJo\'s LG</string>
     <string name="BtnGoInscription">Créer un compte</string>
-    <string name="pseudonymeCreateAccount">Pseudonyme :</string>
-    <string name="lastnameCreateAccount">Nom :</string>
-    <string name="nameCreateAccount">Prenom :</string>
-    <string name="passwordCreateAccount">Mot de passe : </string>
-    <string name="confirmationPasswordCreateAccount">Confirmer mot de passe :</string>
+    <string name="BtnRetour">Retour</string>
+    <string name="BtnSeConnecter">Se connecter</string>
+    <string name="pseudonymeCreateAccount">Pseudonyme</string>
+    <string name="lastnameCreateAccount">Nom</string>
+    <string name="nameCreateAccount">Prenom</string>
+    <string name="passwordCreateAccount">Mot de passe</string>
+    <string name="confirmationPasswordCreateAccount">Confirmer mot de passe</string>
+    <string name="loginPseudonyme">Pseudonyme</string>
+    <string name="loginMotDePasse">Mot de passe</string>
+    <string name="deconnexion">Deconnexion</string>
+    <string name="BtnGererComposition">Gere les compositions</string>
+    <string name="BtnGererJoueur">Gerer les joueurs</string>
+    <string name="ajouter_joueur">Ajouter joueur</string>
+    <string name="nom_de_la_composition">Nom de la composition</string>
+    <string name="jouer">Jouer</string>
 </resources>

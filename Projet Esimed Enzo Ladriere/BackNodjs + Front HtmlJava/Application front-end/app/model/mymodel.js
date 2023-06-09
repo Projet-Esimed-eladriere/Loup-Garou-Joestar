@@ -20,6 +20,14 @@ export default class Mymodel {
             }
         }
 
+        async getCompositionParPseudonyme(pseudonyme) {
+            try {
+                return await this.api.getCompositionParPseudonyme(pseudonyme)
+            } catch {
+                return undefined
+            }
+        }
+
     async creerUtilisateur(pseudonyme, nom, prenom, motDePasse, confirmationMotDePasse){
         try {
             return await this.api.creerUtilisateur(pseudonyme, nom, prenom, motDePasse, confirmationMotDePasse)

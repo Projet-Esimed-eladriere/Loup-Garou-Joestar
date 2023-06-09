@@ -1,28 +1,15 @@
-.LogoJojo
-{
+.LogoJojo {
     width: 15rem;
 }
 
-body
-{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(150,40,138,1) 0%, rgba(149,0,255,1) 100%);
-    margin: 10px;
+body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(150, 40, 138, 1) 0%, rgba(149, 0, 255, 1) 100%);
 }
 
-.col
-{
+.col {
     padding: 0.5rem;
 }
 
-.buttonInscription
-{
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.container
-{
-    width: fit-content;
+.carte{
+    width: 5rem;
 }

@@ -1,20 +1,31 @@
-/*const express = require('express');
+const express = require('express');
 const authRepository = require("../models/auth.repository");
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 
-router.post('/auth/login', async(req, res) => {
-    if((await authRepository.authUser(req.body.firstName, req.body.password)))
-    {
-        console.log('même mot de passe')
-        const token = jwt.sign({ payload: `${req.body.firstName}${req.body.id}` }, 'sopKEY');
-        res.send(token)
+router.post('/login', async(req, res) => {
+    for (let attribut in req.body) {
+        console.log(attribut + ': ' + req.body[attribut]);
     }
-    else
-    {
-        console.log('erreur de  mot de passe')
-        //res.sendStatus(201).end();
+
+    if(req.body.pseudonyme == undefined || req.body.motDePasse == undefined) {
+        return
+    }
+
+    if((await authRepository.authUser(req.body.pseudonyme, req.body.motDePasse))) {
+        const token = jwt.sign({ payload: `${req.body.motDePasse}${req.body.id}` }, 'sopKEY',
+        {
+            expiresIn : "30m"
+        });
+        console.log("Token = " + token)
+        res.status(200).json({ token: token })
+    }
+    else {
+        res.sendStatus(401).end();
     }
 })
 
-exports.initializeRoutes = () => router;*/
+router.get('/refreshToken', async (req, res) => {
+})
+
+exports.initializeRoutes = () => router;
