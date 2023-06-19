@@ -16,7 +16,7 @@ const tableListeJoueur = sequelize.define('listeJoueur', {
 
 const tableListeComposition = sequelize.define('composition', {
     idUtilisateur : {type: DataTypes.UUIDV4, notNull: true},
-    nom : {type: DataTypes.STRING, notNull: true, unique: true},
+    nom : {type: DataTypes.STRING, notNull: true},
     nbrCarte : {type: DataTypes.INTEGER, notNull: true},
     nbrVillageois : {type: DataTypes.INTEGER, notNull: true},
     nbrLoupGarou : {type: DataTypes.INTEGER, notNull: true},
