@@ -1,8 +1,8 @@
-package com.example.jojosproject
+package com.example.jojosproject.DataClass
 
 import com.google.gson.annotations.SerializedName
 
-class Joueur {
+class Joueur:java.io.Serializable {
     @SerializedName("idUtilisateur")
     var idUtilisateur:String? = null
 

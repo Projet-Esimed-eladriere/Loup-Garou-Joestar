@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.Activity
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.jojosproject.GestionApi.GestionUtilisateur
+import com.example.jojosproject.R
+import com.example.jojosproject.DataClass.User
+import com.example.jojosproject.GestionApi.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -47,7 +51,7 @@ class CreateAccountActivity : AppCompatActivity() {
                             val alertDialogDeleteCategory = AlertDialog.Builder(this@CreateAccountActivity)
                             alertDialogDeleteCategory.setTitle("Compte créer : ${response.body()!!.pseudonyme}")
                             alertDialogDeleteCategory.setPositiveButton("Ok"){ _, _ ->
-                                val intent = Intent(this@CreateAccountActivity,LoginActivity::class.java)
+                                val intent = Intent(this@CreateAccountActivity, LoginActivity::class.java)
                                 startActivity(intent)
                             }
                             alertDialogDeleteCategory.create().show()
@@ -76,7 +80,7 @@ class CreateAccountActivity : AppCompatActivity() {
         }
 
         btnRetour.setOnClickListener {
-            val intent = Intent(this@CreateAccountActivity,LoginActivity::class.java)
+            val intent = Intent(this@CreateAccountActivity, LoginActivity::class.java)
             startActivity(intent)
         }
     }

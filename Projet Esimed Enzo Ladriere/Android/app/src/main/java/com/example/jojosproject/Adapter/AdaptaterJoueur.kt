@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.Adapter
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -8,6 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jojosproject.DataClass.Joueur
+import com.example.jojosproject.GestionApi.JWTToken
+import com.example.jojosproject.R
+import com.example.jojosproject.GestionApi.UserService
+import com.example.jojosproject.ViewHolder.ViewHolderJoueur
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

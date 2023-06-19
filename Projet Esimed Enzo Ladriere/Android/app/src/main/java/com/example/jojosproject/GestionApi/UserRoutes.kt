@@ -1,5 +1,9 @@
-package com.example.jojosproject
+package com.example.jojosproject.GestionApi
 
+import com.example.jojosproject.DataClass.AuthenticationResult
+import com.example.jojosproject.DataClass.Composition
+import com.example.jojosproject.DataClass.Joueur
+import com.example.jojosproject.DataClass.User
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.*
@@ -45,12 +49,14 @@ interface UserRoutes {
     @POST("/composition")
     fun createComposition(
         @Header("Authorization") token: String,
-        @Body body: Composition) : Call<ArrayList<Composition>>
+        @Body body: Composition
+    ) : Call<ArrayList<Composition>>
 
     @PUT("/composition")
     fun updateComposition(
         @Header("Authorization") token: String,
-        @Body body: Composition) : Call<Any>
+        @Body body: Composition
+    ) : Call<Any>
 
     @DELETE("composition/{idUtilisateur}/{nom}")
     fun deleteComposition(

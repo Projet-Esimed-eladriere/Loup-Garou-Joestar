@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.GestionApi
 
 class GestionUtilisateur {
 

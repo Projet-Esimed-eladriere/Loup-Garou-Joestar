@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.Activity
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,10 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.text.set
+import com.example.jojosproject.DataClass.Composition
+import com.example.jojosproject.GestionApi.JWTToken
+import com.example.jojosproject.R
+import com.example.jojosproject.GestionApi.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

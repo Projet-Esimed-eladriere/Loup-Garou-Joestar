@@ -1,12 +1,15 @@
-package com.example.jojosproject
+package com.example.jojosproject.Adapter
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jojosproject.DataClass.Composition
+import com.example.jojosproject.R
+import com.example.jojosproject.Activity.SelectionDesJoueursActivity
+import com.example.jojosproject.ViewHolder.ViewHolderCompositionASelectioner
 
 class AdaptaterCompositionASelectioner(
     private var context: Context,
@@ -20,8 +23,8 @@ class AdaptaterCompositionASelectioner(
             activity.runOnUiThread {
                 holder.textView.text = compositions[position]?.nom
                 holder.imageButton.setOnClickListener {
-                    val intent = Intent(context, EditerCompositionActivity::class.java)
-                    intent.putExtra("CompositionAEditer", compositions[position])
+                    val intent = Intent(context, SelectionDesJoueursActivity::class.java)
+                    intent.putExtra("CompositionDeLaPartie", compositions[position])
                     activity.startActivity(intent)
                 }
             }

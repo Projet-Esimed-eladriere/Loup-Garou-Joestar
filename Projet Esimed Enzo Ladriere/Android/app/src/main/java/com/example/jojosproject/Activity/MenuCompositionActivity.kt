@@ -1,15 +1,18 @@
-package com.example.jojosproject
+package com.example.jojosproject.Activity
 
-import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jojosproject.Adapter.AdaptaterComposition
+import com.example.jojosproject.DataClass.Composition
+import com.example.jojosproject.GestionApi.JWTToken
+import com.example.jojosproject.R
+import com.example.jojosproject.GestionApi.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

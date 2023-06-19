@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.SelectionDeCompositionActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewComposition"
+        android:id="@+id/recyclerViewSelectionComposition"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </RelativeLayout>

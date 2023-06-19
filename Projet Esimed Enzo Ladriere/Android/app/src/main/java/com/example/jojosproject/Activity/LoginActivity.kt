@@ -1,9 +1,8 @@
-package com.example.jojosproject
+package com.example.jojosproject.Activity
 
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +11,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import com.example.jojosproject.*
+import com.example.jojosproject.DataClass.AuthenticationResult
+import com.example.jojosproject.DataClass.User
+import com.example.jojosproject.GestionApi.JWTToken
+import com.example.jojosproject.GestionApi.UserRoutes
+import com.example.jojosproject.GestionApi.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

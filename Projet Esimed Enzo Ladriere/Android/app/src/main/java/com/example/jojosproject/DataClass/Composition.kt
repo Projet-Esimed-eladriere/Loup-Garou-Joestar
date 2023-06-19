@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.DataClass
 
 import com.google.gson.annotations.SerializedName
 

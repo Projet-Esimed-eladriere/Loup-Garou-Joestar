@@ -1,4 +1,4 @@
-package com.example.jojosproject
+package com.example.jojosproject.Activity
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.example.jojosproject.DataClass.Composition
+import com.example.jojosproject.GestionApi.JWTToken
+import com.example.jojosproject.R
+import com.example.jojosproject.GestionApi.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

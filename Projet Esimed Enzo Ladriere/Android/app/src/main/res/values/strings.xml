@@ -16,4 +16,10 @@
     <string name="ajouter_joueur">Ajouter joueur</string>
     <string name="nom_de_la_composition">Nom de la composition</string>
     <string name="jouer">Jouer</string>
+    <string name="valider">Valider</string>
+    <string name="nom">Nom</string>
+    <string name="role">Rôle</string>
+    <string name="vivant">Vivant ?</string>
+    <string name="specificit">Spécificité</string>
+    <string name="specificite">specificite</string>
 </resources>

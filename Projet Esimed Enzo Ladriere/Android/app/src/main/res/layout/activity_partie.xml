@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:text="@string/nom"/>
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/nom"
+        android:text="@string/role"/>
+
+    <TextView
+        android:id="@+id/vivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/role"
+        android:text="@string/vivant"/>
+
+    <TextView
+        android:id="@+id/specificite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/vivant"
+        android:text="@string/specificite"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPartie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/nom"/>
+
+    <TextView
+        android:id="@+id/PremiereNuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerViewPartie"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:text="1er Nuit : \n -Cupidon \n -Amoureux \n -Voyante \n -Loup Garou \n - Sorciere"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/PremiereNuit"
+        android:layout_below="@id/recyclerViewPartie"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:text="Autre Nuit :\n -Voyante \n -Loup Garou \n - Sorciere"/>
+</RelativeLayout>
